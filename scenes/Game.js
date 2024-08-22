@@ -11,7 +11,7 @@ export default class Game extends Phaser.Scene {
       this.scoreText = this.add.text(10, 10, 'Score: 0', { fontSize: '20px', fill: '#fff' });
   
       // Crear pala como rectángulo
-      this.paddle = this.add.rectangle(400, 500, 100, 20, 0x6666ff);
+      this.paddle = this.add.rectangle(400, 500, 100, 20, 0xd11c1c);
       this.physics.add.existing(this.paddle);
       this.paddle.body.setImmovable(true);
       this.paddle.body.setCollideWorldBounds(true);
@@ -31,11 +31,11 @@ export default class Game extends Phaser.Scene {
       this.obstacleContainer = this.add.container();
   
       // Añadir múltiples obstáculos al contenedor en una cuadrícula
-      for (let row = 0; row < 3; row++) {
-        for (let col = 0; col < 7; col++) {
-          let x = 120 + col * 80;
+      for (let row = 0; row < 4; row++) {
+        for (let col = 0; col < 6; col++) {
+          let x = 150 + col * 100;
           let y = 100 + row * 40;
-          let obstacle = this.add.rectangle(x, y, 60, 20, 0x66ff66);
+          let obstacle = this.add.rectangle(x, y, 60, 20, 0x24bf39);
           this.physics.add.existing(obstacle);
           obstacle.body.setImmovable(true);
           this.obstacleContainer.add(obstacle);
